@@ -7,5 +7,6 @@ https://www.youtube.com/watch?v=zoTXwMsO0Jw ==> stack lamp sur kubernetes (laiss
 
 https://www.youtube.com/watch?v=tzBgFog6NmY ==> allez voir ca explique bien !
 
-https://www.youtube.com/watch?v=-bgIiKmkhhc ==> Déploiement d'une Stack LAMP via kubernetes
+https://www.youtube.com/watch?v=-bgIiKmkhhc ==> Déploiement d'une Stack LAMP via kubernetes blog lié ==>https://www.nbtechsupport.co.in/2021/09/deploy-lamp-stack-on-kubernetes-cluster.html
+
 
