@@ -14,3 +14,6 @@ https://kubernetes.io/fr/docs/tasks/tools/install-minikube/
 
 Guide d'installation de kubectl
 https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/
+
+Définition Ingress
+https://kubernetes.io/fr/docs/concepts/services-networking/ingress/
