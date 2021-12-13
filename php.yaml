@@ -21,7 +21,7 @@ metadata:
 spec:
   containers:
     - name: php
-      image: php
+      image: php:fpm
       env:
         - name: PMA_HOST
           value: mysql-service
