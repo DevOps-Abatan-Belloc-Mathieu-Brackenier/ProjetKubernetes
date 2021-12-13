@@ -32,4 +32,8 @@ spec:
       volumes:
         - name: mysql-data
           persistentVolumeClaim:
+<<<<<<< HEAD
             claimName: mysql-data-disk
+=======
+            claimName: mysql-data-disk
+>>>>>>> 46ba14f023f51472b231a8dd0291063c72672dc0

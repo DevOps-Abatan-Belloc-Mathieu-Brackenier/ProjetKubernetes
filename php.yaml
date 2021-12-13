@@ -3,9 +3,15 @@ kind: Deployment
 metadata:
   name: php
   labels:
+<<<<<<< HEAD
     app: php
+=======
+    name: php
+  name: php
+>>>>>>> 46ba14f023f51472b231a8dd0291063c72672dc0
 spec:
   selector:
+<<<<<<< HEAD
     matchLabels:
       app: php
   template:
@@ -28,9 +34,15 @@ spec:
       # - name: data
 ---
 kind: Service
+=======
+    name: php
+  type: LoadBalancer
+
+>>>>>>> 46ba14f023f51472b231a8dd0291063c72672dc0
 apiVersion: v1
 metadata:
   name: php
+<<<<<<< HEAD
 spec:
   selector:
     app: php
@@ -39,3 +51,17 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 80
+=======
+  labels:
+    name: php
+spec:
+  containers:
+    - name: php
+      image: php:fpm
+      env:
+        - name: PMA_HOST
+          value: mysql-service
+      ports: 
+        - containerPort: 80
+          name: php
+>>>>>>> 46ba14f023f51472b231a8dd0291063c72672dc0
