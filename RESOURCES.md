@@ -19,5 +19,3 @@ https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/
 
 Définition Ingress
 https://kubernetes.io/fr/docs/concepts/services-networking/ingress/
-
-Pour installer mysql : https://www.serverlab.ca/tutorials/containers/kubernetes/how-to-deploy-mysql-server-5-7-to-kubernetes/

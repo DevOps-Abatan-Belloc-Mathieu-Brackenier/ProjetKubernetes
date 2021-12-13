@@ -26,8 +26,8 @@ Pour installer kubernetes:
 
 Pour créer les fichiers:
 
-kubectl apply -f apache.yaml
-kubectl apply -f mysql.yaml
-kubectl apply -f php.yaml
+kubectl create -f apache.yaml
+kubectl create -f mysql.yaml
+kubectl create -f php.yaml
 
 kubectl get node => status: ready
