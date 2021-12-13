@@ -21,7 +21,7 @@ metadata:
 spec:
   containers:
     - name: phpmyadmin
-      image: php-ingress
+      image: phpmyadmin/phpmyadmin
       env:
         - name: PMA_HOST
           value: mysql-service
