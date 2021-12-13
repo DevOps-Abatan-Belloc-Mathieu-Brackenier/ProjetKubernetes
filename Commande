@@ -1,0 +1,25 @@
+Pour installer minikube:
+
+	1) curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+  && chmod +x minikube
+  
+  	2) sudo mkdir -p /usr/local/bin/
+  	
+  	3) sudo install minikube /usr/local/bin/
+  	
+  	4) minikube start
+  	
+  	5) minikube status
+  	
+Pour installer kubernetes:
+
+	1) curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+
+	2) chmod +x ./kubectl
+	
+	3) sudo mv ./kubectl /usr/local/bin/kubectl
+	
+	4) kubectl version --client
+	
+	
+=> minikube dashboard
