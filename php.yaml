@@ -2,29 +2,29 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: phpmyadmin
-  name: phpmyadmin
+    name: php
+  name: php
 spec:
   ports:
     - port: 80
       targetPort: 80
   selector:
-    name: phpmyadmin
+    name: php
   type: LoadBalancer
 
 apiVersion: v1
 kind: Pod
 metadata:
-  name: phpmyadmin
+  name: php
   labels:
-    name: phpmyadmin
+    name: php
 spec:
   containers:
-    - name: phpmyadmin
-      image: phpmyadmin/phpmyadmin
+    - name: php
+      image: php
       env:
         - name: PMA_HOST
           value: mysql-service
       ports: 
         - containerPort: 80
-          name: phpmyadmin
+          name: php

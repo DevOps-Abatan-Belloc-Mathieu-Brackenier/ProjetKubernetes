@@ -1,9 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysqldeploy
+  name: mysql-deployment
+  labels:
+    app: mysql
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
   template:
     metadata:
       labels:
@@ -11,24 +16,20 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: mysql
+          image: mysql:5.7
           ports:
             - containerPort: 3306
-              name: mysql
+          volumeMounts:
+            - mountPath: "/var/lib/mysql"
+              subPath: "mysql"
+              name: mysql-data
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: "projetDevOps"
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: mysql-service
-spec:
-  selector:
-    app: mysql
-  ports:
-    - protocol: TCP
-      port: 3306
-      targetPort: 3306
-      nodePort: 30006
-  type: NodePort
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secrets
+                  key: ROOT_PASSWORD
+      volumes:
+        - name: mysql-data
+          persistentVolumeClaim:
+            claimName: mysql-data-disk
