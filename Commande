@@ -23,3 +23,11 @@ Pour installer kubernetes:
 	
 	
 => minikube dashboard
+
+Pour créer les fichiers:
+
+kubectl create -f apache.yaml
+kubectl create -f mysql.yaml
+kubectl create -f php.yaml
+
+kubectl get node => status: ready
