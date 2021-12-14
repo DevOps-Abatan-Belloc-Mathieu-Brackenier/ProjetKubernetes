@@ -26,8 +26,22 @@ Pour installer kubernetes:
 
 Pour créer les fichiers:
 
-kubectl create -f apache.yaml
-kubectl create -f mysql.yaml
-kubectl create -f php.yaml
+kubectl apply -f apache.yaml
+kubectl apply -f mysql.yaml
+kubectl apply -f php.yaml
 
-kubectl get node => status: ready
+kubectl get node => 
+
+NAME       STATUS   ROLES                  AGE   VERSION
+
+minikube   Ready    control-plane,master   8d    v1.22.3
+
+
+kubectl get pods => 
+
+NAME                                READY   STATUS    RESTARTS      AGE
+
+mysql-deployment-694787d87b-z9qhn   1/1     Running   3 (32m ago)   30h
+php-589f849d6d-tvvdv                1/1     Running   1 (32m ago)   27h
+webserver-8549c895cd-st247          1/1     Running   3 (32m ago)   31h
+
